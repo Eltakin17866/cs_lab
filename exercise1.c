@@ -1,41 +1,27 @@
-#include <stdio.h>
+#include<stdio.h>
+
+int main() {
+int n, i;
+
+long long sum = 0, product = 1;
 
 
+scanf("%d", &n);
 
-int main()
+ if (n < 1) {
+        printf("The entered value must be 1 or greater.\n");
+       
+    }
 
-{
+    for (i = 1; i <= n; i++) {
+     int xi = 3*i - 1;
+     sum += xi;
+     product *= xi;
+    }
+printf("%d\n", sum);
+printf("%d\n", product);
 
-  int x, y;
+return 0;
 
-   
-
-  scanf("%d", &x);
-
-   
-
-  if (x > 0) {
-
-    y = x * x - 2 * x + 3;
-
-  }
-
-  else if (x == 0) {
-
-    y = x - 5;
-
-  }
-
-  else {
-
-    y = x * x + 2 * x - 3;
-
-  }
-
-   
-
-  printf("%d", y);
-
-   return 0;
 
 }
